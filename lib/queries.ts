@@ -1,21 +1,12 @@
 "use server";
 
-import { getCache, setCache } from "./cache";
 import { parseAndSortDetails } from "./utils";
 
 export async function getEventDetails(): Promise<{
   events: Record<string, Record<string, number>>[];
   lastUpdated: string;
 }> {
-  const { cachedEvents, lastFetched } = getCache();
-
-  if (cachedEvents.length > 0) {
-    // Return cached data
-    return {
-      events: cachedEvents,
-      lastUpdated: lastFetched!,
-    };
-  }
+  const lastFetched = new Date().toISOString();
 
   // Get current days events
   const data = await fetch(
@@ -42,9 +33,6 @@ export async function getEventDetails(): Promise<{
   );
 
   const parsedDetails = parseAndSortDetails(details);
-
-  // Store in cache
-  setCache(parsedDetails);
 
   return {
     events: parsedDetails,
