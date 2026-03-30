@@ -11,7 +11,7 @@ export async function getEventDetails(): Promise<{
   // Get current days events
   const data = await fetch(
     "http://sports.core.api.espn.com/v2/sports/hockey/leagues/nhl/events",
-    { next: { revalidate: 1800 } }, // Revalidate every 30 minutes
+    // { next: { revalidate: 1800 } }, // Revalidate every 30 minutes
   ).then((res) => res.json());
 
   // Extract event IDs
@@ -24,7 +24,7 @@ export async function getEventDetails(): Promise<{
     eventIds.map(async (id) => {
       const oddsData = await fetch(
         `http://sports.core.api.espn.com/v2/sports/hockey/leagues/nhl/events/${id}/competitions/${id}/odds`,
-        { next: { revalidate: 1800 } }, // Revalidate every 30 minutes
+        // { next: { revalidate: 1800 } }, // Revalidate every 30 minutes
       ).then((res) => res.json());
 
       // Return the details string -> "BOS -142"
