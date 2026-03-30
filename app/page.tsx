@@ -7,9 +7,7 @@ export default async function Home() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-linear-to-br from-gray-500 via-gray-700 to-black text-white">
       <div className="p-6">
-        <h1 className="text-3xl font-bold">
-          NHL Favorites
-        </h1>
+        <h1 className="text-3xl font-bold">NHL Favorites</h1>
         {/* <p className="text-sm text-gray-400">Updated Every 30 Minutes</p> */}
         <p className="text-sm text-gray-400 mb-3">
           Last updated: {new Date(lastUpdated).toLocaleString()}
@@ -46,8 +44,7 @@ export default async function Home() {
         <p className="text-sm text-gray-400 mt-6 max-w-xl">
           <span className="font-semibold text-gray-300">How it works:</span>{" "}
           This app pulls publicly available NHL odds data from ESPN's API and
-          identifies the favorites for each game. Useful for quickly making
-          picks in the Jersey Mike's Shore Points hockey promotion.
+          identifies the favorites for each game.
         </p>
 
         <p className="text-sm text-gray-400 mt-4 max-w-xl leading-relaxed">

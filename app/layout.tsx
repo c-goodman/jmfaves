@@ -13,18 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title:
-    "NHL Favorites Today (Odds & Win %) | Jersey Mike's Points Game Helper",
-  description:
-    "See today's NHL favorites ranked by odds and win probability. Built for the Jersey Mike's Shore Points hockey promotion to quickly find the best picks updated daily.",
+  title: "NHL Favorites Today (Odds & Win %)",
+  description: "See today's NHL favorites ranked by odds and win probability.",
   keywords: [
     "NHL favorites today",
     "NHL odds today",
     "NHL win probability",
     "NHL moneyline odds",
     "NHL money line odds",
-    "Jersey Mike's hockey promotion",
-    "Jersey Mike's points game NHL",
+    "hockey promotion",
     "NHL picks today",
     "NHL betting odds ESPN",
   ],
