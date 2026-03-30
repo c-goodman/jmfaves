@@ -8,9 +8,9 @@ export default async function Home() {
     <div className="flex flex-col items-center min-h-screen bg-linear-to-br from-gray-500 via-gray-700 to-black text-white">
       <div className="p-6">
         <h1 className="text-3xl font-bold">
-          NHL Favorites (Jersey Mike's Faves)
+          NHL Favorites
         </h1>
-        <p className="text-sm text-gray-400">Updated Every 30 Minutes</p>
+        {/* <p className="text-sm text-gray-400">Updated Every 30 Minutes</p> */}
         <p className="text-sm text-gray-400 mb-3">
           Last updated: {new Date(lastUpdated).toLocaleString()}
         </p>
